@@ -32,8 +32,8 @@ type Request struct {
 //
 // https://cloud.yandex.ru/docs/functions/concepts/function-invoke#response
 type Response struct {
-	StatusCode      int        `json:"statusCode"`
-	Body            Request    `json:"body"`
-	Headers         url.Values `json:"multiValueHeaders"`
-	IsBase64Encoded bool       `json:"isBase64Encoded"`
+	StatusCode      int         `json:"statusCode"`
+	Body            interface{} `json:"body"`
+	Headers         url.Values  `json:"multiValueHeaders"`
+	IsBase64Encoded bool        `json:"isBase64Encoded"`
 }
